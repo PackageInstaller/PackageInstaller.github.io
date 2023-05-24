@@ -1,6 +1,6 @@
 {
-  "name": "hexo-template",
-  "version": "1.0.0",
+  "name": "hexo-site",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
     "build": "hexo generate",
@@ -12,8 +12,7 @@
     "version": "6.3.0"
   },
   "dependencies": {
-    "hexo": "^6.0.0",
-    "hexo-deployer-git": "^4.0.0",
+    "hexo": "^6.3.0",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
     "hexo-generator-index": "^3.0.0",
@@ -22,7 +21,6 @@
     "hexo-renderer-marked": "^6.0.0",
     "hexo-renderer-stylus": "^3.0.0",
     "hexo-server": "^3.0.0",
-    "hexo-theme-butterfly": "^4.8.5",
     "hexo-theme-landscape": "^1.0.0"
   }
 }
