@@ -42,38 +42,32 @@ root: /hexo-template
 **Install Hexo**
 
 ``` bash
-$ npm install hexo-cli -g
-```
-
-Install with [brew](https://brew.sh/) on macOS and Linux:
-
-```bash
-$ brew install hexo
+npm install hexo-cli -g
 ```
 
 **Setup your blog**
 
 ``` bash
-$ hexo init blog
-$ cd blog
+hexo init blog
+cd blog
 ```
 
 **Start the server**
 
 ``` bash
-$ hexo server
+hexo server
 ```
 
 **Create a new post**
 
 ``` bash
-$ hexo new "Hello Hexo"
+hexo new "Hello Hexo"
 ```
 
 **Generate static files**
 
 ``` bash
-$ hexo generate
+hexo generate
 ```
 
 ## More Information
