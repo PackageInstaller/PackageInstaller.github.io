@@ -1,0 +1,141 @@
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.45);
+  --glass-bg-dark: rgba(20, 20, 20, 0.5);
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --glass-border-dark: rgba(255, 255, 255, 0.1);
+  --glass-blur: blur(16px) saturate(180%);
+  --android-radius: 28px;
+  --primary-color: #8AB4F8;
+  --accent-color: #C2E7FF;
+}
+
+/* Liquid Background Container */
+#liquid-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  transition: background 0.5s ease;
+}
+
+[data-theme='dark'] #liquid-bg {
+  background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+}
+
+.blob {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: var(--primary-color);
+  filter: blur(80px);
+  border-radius: 50%;
+  opacity: 0.4;
+  animation: move 20s infinite alternate;
+}
+
+.blob:nth-child(2) {
+  background: #f88af3;
+  width: 600px;
+  height: 600px;
+  left: -100px;
+  top: -100px;
+  animation-duration: 25s;
+  animation-delay: -5s;
+}
+
+.blob:nth-child(3) {
+  background: #8af8b4;
+  width: 450px;
+  height: 450px;
+  right: -50px;
+  bottom: -50px;
+  animation-duration: 30s;
+  animation-delay: -10s;
+}
+
+@keyframes move {
+  from { transform: translate(0, 0) scale(1); }
+  to { transform: translate(100px, 100px) scale(1.2); }
+}
+
+/* Glassmorphism Overrides */
+#aside-content .card-widget,
+#content-inner > .recent-posts > .recent-post-item,
+#page,
+#post,
+.category-lists,
+.tag-cloud-list,
+#archive,
+.flink-list-item,
+.view-plugins,
+.layout,
+#footer {
+  background: var(--glass-bg) !important;
+  backdrop-filter: var(--glass-blur) !important;
+  -webkit-backdrop-filter: var(--glass-blur) !important;
+  border: 1px solid var(--glass-border) !important;
+  border-radius: var(--android-radius) !important;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07) !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+#aside-content .card-widget:hover,
+#content-inner > .recent-posts > .recent-post-item:hover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.15) !important;
+}
+
+[data-theme='dark'] #aside-content .card-widget,
+[data-theme='dark'] #content-inner > .recent-posts > .recent-post-item,
+[data-theme='dark'] #page,
+[data-theme='dark'] #post,
+[data-theme='dark'] .category-lists,
+[data-theme='dark'] .tag-cloud-list,
+[data-theme='dark'] #archive,
+[data-theme='dark'] .flink-list-item,
+[data-theme='dark'] .view-plugins,
+[data-theme='dark'] .layout,
+[data-theme='dark'] #footer {
+  background: var(--glass-bg-dark) !important;
+  border: 1px solid var(--glass-border-dark) !important;
+}
+
+/* Hide original background */
+#web_bg {
+  display: none !important;
+}
+
+/* Nav Bar Glassmorphism */
+#nav {
+  background: rgba(255, 255, 255, 0.2) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border-bottom: 1px solid var(--glass-border) !important;
+}
+
+#nav.show {
+  background: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Material You Input Fields */
+input, textarea {
+  border-radius: 12px !important;
+  border: 1px solid var(--glass-border) !important;
+  background: rgba(255, 255, 255, 0.2) !important;
+  padding: 10px 15px !important;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Selection */
+::selection {
+  background: var(--primary-color);
+  color: white;
+}
